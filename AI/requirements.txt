@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+google-generativeai
+opencv-python
+pydantic
+python-dotenv
+pydantic-settings>=2.0.0
