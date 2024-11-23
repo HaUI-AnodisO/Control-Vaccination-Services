@@ -1,0 +1,39 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Format and lint code
+echo "🪄 In the process of formatting and linting code."
+npx lint-staged || exit 1  # Dừng lại nếu linting gặp lỗi
+
+echo "✨ All code is beautiful ✨"
+
+# Get the current branch name
+branch_name=$(git rev-parse --abbrev-ref HEAD)
+
+# Define branch naming convention regex
+branch_regex="^(feature|bugfix|hotfix|release|docs|ci)(\/[a-z0-9._-]+)?$"
+
+# Allowed email for protected branches
+allowed_email="nguyenthitrang.ttd@gmail.com"
+
+# Check if pushing to a protected branch
+if [ "$branch_name" = "develop" ] || [ "$branch_name" = "uat" ] || [ "$branch_name" = "prod" ]; then
+  email=$(git config user.email)
+
+  if [ "$email" != "$allowed_email" ]; then
+    echo "⛔️ Error: User '$email' is not allowed to push to the '$branch_name' branch."
+    exit 1
+  fi
+  echo "✅ Skipping branch name check for '$branch_name' with user email '$email'."
+
+else
+  # Check if the branch name matches the convention
+  if ! echo "$branch_name" | grep -Eq "$branch_regex"; then
+    echo "⛔️ Error: Branch name '$branch_name' does not follow the naming convention."
+    echo "Allowed patterns: feature/*, bugfix/*, hotfix/*, release/*, docs/*"
+    exit 1
+  fi
+fi
+
+# Allow the commit if all checks pass
+exit 0
