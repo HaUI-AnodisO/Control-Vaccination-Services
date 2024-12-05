@@ -103,7 +103,44 @@ Trước khi cài đặt, bạn cần cài đặt các công cụ sau:
 
 
 ### 🔨 Cài Đặt
-#### Viết lại
+#### Cài đặt budibase
+Đầu tiên, ta cần cài đặt ứng dụng budibase về self-host, hoặc có thể sử dụng luôn chính website trang chủ budibase chính thức tại [đây](https://budibase.com/)
+
+#### Để cài đặt budibase selfhost, ta thực hiện các bước như sau:
+Bước 1. clone dự án budibase về máy của bạn:
+```bash
+git clone https://github.com/Budibase/budibase.git
+```
+Bước 2. cd vào thư mục hosting 
+```bash
+cd budibase/hosting/
+```
+Bước 3: Tạo tài khoản admin
+- Bạn vào file .env, tìm đến và điền thông tin của mình ở phần này 
+```bash
+# An admin user can be automatically created initially if these are set
+BB_ADMIN_USER_EMAIL=
+BB_ADMIN_USER_PASSWORD=
+```
+Bước 4: chạy lệnh docker-compose
+```bash
+docker-compose --env-file hosting.properties up
+```
+Ứng dụng budibase của bạn sẽ chạy trên địa chỉ http://localhost:10000
+#### Import dự án của chúng tôi
+Trước hết, hãy clone dự án về máy tính của bạn:
+
+```bash
+git clone https://github.com/HaUI-AnodisO/Control-Vaccination-Services.git
+```
+
+Bạn sẽ thấy một file nén trong thu mục src/.   
+Bây giờ, bạn hãy import thư mục nén này vào app budibase như sau họăc dựa theo [hướng dẫn này](https://docs.budibase.com/docs/export-and-import-apps#:~:text=Within%20the%20Apps%20screen%2C%20click,click%20Import%20app%20to%20finish.):  
+Bước 1: Mở ứng dụng và đăng nhập vào tài khoản
+Bước 2: Chọn ***Create new app*** để tạo mới app rồi chọn app mới đó
+Bước 2: Vào phần ***Settings***, chọn ***Export/Import*** rồi chọn ***Import app***![alt text](image.png)
+Bước 3: Chọn file nén trong thư mục src và nhấn ***Update***
+
 
 ## 🙌 Đóng góp cho dự án
 
