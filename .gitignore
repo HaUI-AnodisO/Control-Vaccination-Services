@@ -1,8 +1,5 @@
 /node_modules
 __pycache__/
 *.pyc
-*.pdf
-*.jpg
 *.log
 env/
-target/
