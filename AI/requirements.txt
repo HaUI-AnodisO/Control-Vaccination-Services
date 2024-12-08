@@ -6,3 +6,5 @@ Pillow
 matplotlib
 vietocr
 numpy
+PyMuPDF
+pycryptodome
