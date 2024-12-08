@@ -1,12 +1,12 @@
 import os
-from fastapi import FastAPI, UploadFile, File, Form
+from fastapi import FastAPI, UploadFile, File, Form, APIRouter
 from fastapi.responses import FileResponse
 from digital_sig.utils import remove_background
 from digital_sig.insert_stamp import insert_stamp
 from digital_sig.sign_pdf import sign_pdf
 from digital_sig.verify_pdf_signature import verify_pdf_signature
 from digital_sig.make_dig_sig import create_rsa_keys, create_signature, verify_signature
-app = FastAPI()
+app = APIRouter()
 
 @app.post("/remove-background/")
 async def api_remove_background(file: UploadFile = File(...)):

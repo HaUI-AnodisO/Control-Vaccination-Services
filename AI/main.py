@@ -1,13 +1,11 @@
 # main.py
 from fastapi import FastAPI
-from digital_sig.main_digital_sig import app as digital_sig_app
-from ocr.main_ocr import app as ocr_app
+from digital_sig.main_digital_sig import app as digital_sig_router
+from ocr.main_ocr import app as ocr_router
 
 app = FastAPI()
 
-# Gộp các route từ hai app
-app.mount("/digital-sig", digital_sig_app)
-app.mount("/ocr", ocr_app)
-@app.get("/")
-def read_root():
-    return {"message": "Hello World"}
+# Thêm các router vào ứng dụng chính
+app.include_router(ocr_router, prefix="/ocr", tags=["OCR APIs"])
+app.include_router(digital_sig_router, prefix="/digital-sig", tags=["Digital Signature APIs"])
+
