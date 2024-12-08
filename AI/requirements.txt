@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+ultralytics
+opencv-python
+Pillow
+matplotlib
+vietocr
+numpy
+PyMuPDF
+pycryptodome
