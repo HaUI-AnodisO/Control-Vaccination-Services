@@ -1,17 +1,17 @@
-from fastapi import FastAPI, UploadFile, HTTPException
+from fastapi import FastAPI, UploadFile, HTTPException, APIRouter
 from PIL import Image
-from app.models import OCRResult
-from app.utils.image_utils import crop_image, preprocess_image
-from app.utils.ocr_utils import clean_text
-from app.utils.yolo_utils import load_yolo_model, get_label_map
-from app.config import load_ocr_model
+from ocr.models import OCRResult
+from ocr.utils.image_utils import crop_image, preprocess_image
+from ocr.utils.ocr_utils import clean_text
+from ocr.utils.yolo_utils import load_yolo_model, get_label_map
+from ocr.config import load_ocr_model, YOLO_MODEL_PATH, CONFIDENCE_THRESHOLD
 import numpy as np
 import json
 
-app = FastAPI()
+app = APIRouter()
 
 # Load YOLO and OCR models
-yolo_model = load_yolo_model('/home/administrator/Desktop/project/AI2/ocr/app/best.pt')
+yolo_model = load_yolo_model(YOLO_MODEL_PATH)
 ocr_model = load_ocr_model()
 label_map = get_label_map()
 
@@ -23,7 +23,7 @@ async def process_image(file: UploadFile):
 
     # Load image
     image = Image.open(file.file)
-    result = yolo_model.predict(image, conf=0.25)[0]
+    result = yolo_model.predict(image, conf=CONFIDENCE_THRESHOLD)[0]
 
     # Prepare result dictionary
     result_dict = {}
