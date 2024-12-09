@@ -43,7 +43,7 @@ jobs:
       - name: Validate PR commits with commitlint
         if: github.event_name == 'pull_request'
         run: |
-          npx commitlint --from ${{ github.event.pull_request.head.sha }}~${{ github.event.pull_request.commits }} --to ${{ github.event.pull_request.head.sha }} --verbose
+          npx commitlint --from ${GITHUB_SHA}~1 --to ${GITHUB_SHA} --verbose
 
       # Bước 6: Kiểm tra commit của push
       - name: Validate push commit with commitlint
