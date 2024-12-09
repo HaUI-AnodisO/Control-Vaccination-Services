@@ -78,8 +78,7 @@ Project CI/CD sử dụng Github và [Github Actions](https://github.com/Anodis1
 
 ## Cấu trúc thư mục
 
-- [Backend](backend/README.md): Chứa các service backend, API, và các chức năng xử lý dấu.
-- [Frontend](frontend/README.md): Giao diện người dùng, dễ sử dụng và có thể thao tác trên đó
+### Sửa lại
 - [Docs](docs): Tài liệu về hệ thống, cuoocj thi, sử dụng.
 - [AI](AI/README.md): Tài liệu về module xử lý ảnh
 
@@ -136,10 +135,12 @@ git clone https://github.com/HaUI-AnodisO/Control-Vaccination-Services.git
 
 Bạn sẽ thấy một file nén trong thu mục src/.   
 Bây giờ, bạn hãy import thư mục nén này vào app budibase như sau họăc dựa theo [hướng dẫn này](https://docs.budibase.com/docs/export-and-import-apps#:~:text=Within%20the%20Apps%20screen%2C%20click,click%20Import%20app%20to%20finish.):  
-Bước 1: Mở ứng dụng và đăng nhập vào tài khoản
-Bước 2: Chọn ***Create new app*** để tạo mới app rồi chọn app mới đó
-Bước 2: Vào phần ***Settings***, chọn ***Export/Import*** rồi chọn ***Import app***![alt text](image.png)
-Bước 3: Chọn file nén trong thư mục src và nhấn ***Update***
+Bước 1: Trên github, tại phần release có tệp nén **Vaccine.Control.Center-export-###.tar.gz** là phần EXport app của chúng tôi. Hãy lưu tệp đó về  
+Bước 2: Mở ứng dụng và đăng nhập vào tài khoản  
+Bước 3: Chọn ***Create new app*** để tạo mới app rồi chọn app mới đó  
+Bước 4: Vào phần ***Settings***, chọn ***Export/Import*** rồi chọn ***Import app***![alt text](image.png)
+Bước 5: Chọn tệp **Vaccine.Control.Center-export-###.tar.gz** đã tải về trước đó, vậy là bạn đã có thể sử dụng dịch vụ của chúng tôi rồi
+
 
 
 ## 🙌 Đóng góp cho dự án
