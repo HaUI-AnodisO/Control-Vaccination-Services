@@ -1,3 +1,21 @@
+#### 1.0.0 (2024-12-09)
+
+##### Documentation Changes
+
+* **readme:**  add gemini readme (cd6a9c1c)
+
+##### New Features
+
+*  add email layout (dd97dda4)
+
+##### Bug Fixes
+
+* **commitlint:**  resize check scope (d74a4dba)
+
+##### Other Changes
+
+* HaUI-HIT-AnodisO/Control-Vaccination-Services into workflow (77250b5a)
+
 #### 1.0.0 (2024-12-03)
 
 ##### Chores
