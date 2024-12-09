@@ -7,12 +7,12 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/HaUI-AnodisO/Control-Vaccination-Services 'Github contributors')](https://github.com/HaUI-AnodisO/Control-Vaccination-Services/graphs/contributors)
 ![](./docs/images/banner.png)
 
-# Tên ứng dụng là gì?
+# Control-Vaccination-Services
 
 <a href="https://github.com/HaUI-AnodisO/Control-Vaccination-Services/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=">Bug Report ⚠️</a>
 <a href="https://github.com/HaUI-AnodisO/Control-Vaccination-Services/issues/new?assignees=&labels=&projects=&template=feature_request.md&title=">Request Feature 👩‍💻</a>
  
-![Trang chủ](docs/images/trang_chu.jpg)
+![Trang chủ](docs/images/trang_chu.png)
 ![Trang chủ Upload](docs/images/trang_cho_uploadupload.jpeg)
 
 Giới thiệu lại
@@ -138,7 +138,7 @@ Bây giờ, bạn hãy import thư mục nén này vào app budibase như sau h�
 Bước 1: Trên github, tại phần release có tệp nén **Vaccine.Control.Center-export-###.tar.gz** là phần EXport app của chúng tôi. Hãy lưu tệp đó về  
 Bước 2: Mở ứng dụng và đăng nhập vào tài khoản  
 Bước 3: Chọn ***Create new app*** để tạo mới app rồi chọn app mới đó  
-Bước 4: Vào phần ***Settings***, chọn ***Export/Import*** rồi chọn ***Import app***![alt text](image.png)
+Bước 4: Vào phần ***Settings***, chọn ***Export/Import*** rồi chọn ***Import app***![alt text](docs/images/budibase.png)
 Bước 5: Chọn tệp **Vaccine.Control.Center-export-###.tar.gz** đã tải về trước đó, vậy là bạn đã có thể sử dụng dịch vụ của chúng tôi rồi
 
 
