@@ -1,0 +1,52 @@
+name: Commitlint
+
+on:
+  pull_request:
+    branches:
+      - '**'  # Kiểm tra commit trên tất cả các nhánh trước khi merge
+  push:
+    branches:
+      - '**'  # Kiểm tra commit khi đẩy lên bất kỳ nhánh nào
+
+jobs:
+  commitlint:
+    runs-on: ubuntu-22.04
+    steps:
+      # Bước 1: Checkout mã nguồn
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Lấy toàn bộ lịch sử commit
+
+      # Bước 2: Cài đặt các phụ thuộc cần thiết
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y git curl
+          curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+          sudo DEBIAN_FRONTEND=noninteractive apt install -y nodejs
+          npm install
+
+      # Bước 3: In ra phiên bản của các công cụ
+      - name: Print versions
+        run: |
+          git --version
+          node --version
+          npm --version
+          npx commitlint --version
+
+      # Bước 4: Cài đặt commitlint nếu chưa cài đặt
+      - name: Install commitlint
+        run: |
+          npm install @commitlint/cli @commitlint/config-conventional
+
+      # Bước 5: Kiểm tra commit trên Pull Request (PR)
+      - name: Validate PR commits with commitlint
+        if: github.event_name == 'pull_request'
+        run: |
+          npx commitlint --from ${GITHUB_SHA}~1 --to ${GITHUB_SHA} --verbose
+
+      # Bước 6: Kiểm tra commit của push
+      - name: Validate push commit with commitlint
+        if: github.event_name == 'push'
+        run: |
+          npx commitlint --from HEAD~1 --to HEAD --verbose
