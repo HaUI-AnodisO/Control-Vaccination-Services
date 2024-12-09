@@ -8,3 +8,5 @@ vietocr
 numpy
 PyMuPDF
 pycryptodome
+python-multipart
+python-dotenv

@@ -12,5 +12,5 @@ OCR_DEVICE = os.getenv("OCR_DEVICE", "cuda")
 def load_ocr_model() -> Predictor:
     """Load VietOCR model."""
     config = Cfg.load_config_from_name(OCR_CONFIG_NAME)
-    config['device'] = OCR_DEVICE  # Use GPU if available
+    # config['device'] = OCR_DEVICE  # Use GPU if available
     return Predictor(config)
