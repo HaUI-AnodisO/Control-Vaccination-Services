@@ -3,3 +3,14 @@ __pycache__/
 *.pyc
 *.log
 env/
+# Ignore Python bytecode files
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environment
+venv/
+.env/
+
+# Ignore __pycache__ folders
+__pycache__
