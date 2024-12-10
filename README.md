@@ -64,10 +64,13 @@ Document đặc tả usecase: [Doc](docs/pdf/usecase.pdf)
 ---
 
 ## 👩‍💻 Tổng Quan Hệ Thống
-#### Xem và viết lại
-Mô hình hệ thống bao gồm các công nghệ:
 
-
+Mô hình hệ thống bao gồm các công nghệ:  
+- [Docker](https://www.docker.com/): Containerize các service.
+- [Nginx](https://nginx.org/en/): Reverse proxy server, load balancer, và web server cho các dịch vụ.
+- [Budibase](https://budibase.com/): Nền tảng low-code để xây dựng và triển khai ứng dụng  nhanh chóng.
+- [FastAPI](https://fastapi.tiangolo.com/): Framework web để xây dựng API nhanh chóng và hiệu quả với Python.
+- [Gemini](https://gemini.google.com/): API hỗ trợ các mô hình trí tuệ nhân tạo và học máy, như GPT, phục vụ các tác vụ xử lý ngữ nghĩa và trích xuất thông tin.
 <img loading="lazy" src="docs/images/sysyem_architecture.svg" alt="System Architecture" width="100%" height=600>
 
 
@@ -85,7 +88,7 @@ Project CI/CD sử dụng Github và [Github Actions](https://github.com/Anodis1
 ## Cấu trúc thư mục
 - [src](src/README.md): Các tệp export của budibase
 - [Docs](docs): Tài liệu về hệ thống, cuộc thi, sử dụng.
-- [AI](AI/README.md): Tài liệu về module ocr
+- [AI](AI/README.md): Tài liệu về module ocr và Gemini AI
 
 ---
 ## API List
@@ -98,7 +101,6 @@ Project CI/CD sử dụng Github và [Github Actions](https://github.com/Anodis1
 ## Hướng Dẫn Cài Đặt
 
 ### Yêu Cầu 📋
-#### Viết thêm
 Trước khi cài đặt, bạn cần cài đặt các công cụ sau:
 
 - [Docker](https://www.docker.com/get-docker/)
@@ -106,6 +108,7 @@ Trước khi cài đặt, bạn cần cài đặt các công cụ sau:
 
 
 ### 🔨 Cài Đặt
+---
 #### Cài đặt budibase
 Đầu tiên, ta cần cài đặt ứng dụng budibase về self-host, hoặc có thể sử dụng luôn chính website trang chủ budibase chính thức tại [đây](https://budibase.com/)
 
@@ -130,18 +133,33 @@ Bước 4: chạy lệnh docker-compose
 docker-compose --env-file hosting.properties up
 ```
 Ứng dụng budibase của bạn sẽ chạy trên địa chỉ http://localhost:10000
+
+--- 
+#### Cài đặt AI
+Trước hết, hãy cd vào thư mục AI
+```bash
+cd AI/
+```
+Sau đó, thực hiện các bước theo [hướng dẫn này](AI/README.md)
+---
 #### Import dự án của chúng tôi
 Trước hết, hãy clone dự án về máy tính của bạn:
 
 ```bash
 git clone https://github.com/HaUI-AnodisO/Control-Vaccination-Services.git
 ```
+cd vào thư mục Control-Vaccination-Services/src:
 
-Bạn sẽ thấy một file nén trong thu mục src/.   
+```bash
+cd Control-Vaccination-Services/src
+```
+Bạn sẽ thấy các file đã được giải nén ra. Việc cần làm là nén chúng lại giống như [hướng dẫn](src/README.md) để tạo file nén.   
 Bây giờ, bạn hãy import thư mục nén này vào app budibase như sau họăc dựa theo [hướng dẫn này](https://docs.budibase.com/docs/export-and-import-apps#:~:text=Within%20the%20Apps%20screen%2C%20click,click%20Import%20app%20to%20finish.):  
 ## Hướng dẫn Cài đặt và Sử dụng
 
 ### Bước 1: Tải tệp nén
+- Nếu bạn đã có tệp nén sau bước nén trên thì sẽ không cần thực hiện bước ày nữa, ta sẽ sử dụng luôn file nén đó.  
+
 Truy cập vào phần **Release** trên GitHub, tìm tệp nén có tên `Vaccine.Control.Center-export-###.tar.gz`, đây là phần **Export app** của chúng tôi. Hãy tải tệp đó về máy.
 
 ### Bước 2: Đăng nhập vào ứng dụng
