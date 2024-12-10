@@ -1,4 +1,5 @@
 # AI
+Thư mục này chứa các mô-đun AI và xử lý dữ liệu liên quan đến trí tuệ nhân tạo (AI). 
 ## OCR
 ### Cấu trúc thư mục
 ```bash
@@ -60,14 +61,14 @@
 - `clean_text`: Làm sạch văn bản đã nhận dạng.
 
 - **Quy trình**:
+![ocr](../docs/images/ocr.svg)
   1. Text detection: trích xuất ra các vùng ảnh được huấn luyện
-  2. Xử lý ảnh
-  3. Chèn hình ảnh con dấu vào trang PDF.
-  4. Trả về file PDF đã được chèn con dấu.
+  2. Tiền Xử lý ảnh
+  3. Trích xuất chữ từ hình ảnh
+  4. Trả về thông tin cần thiết
 
 
 ## Gemini API
-Thư mục này chứa các mô-đun AI và xử lý dữ liệu liên quan đến trí tuệ nhân tạo (AI). Gồm 2 chức năng là thực hiện chữ ký số  khi thêm con dấu vào file pdf và thêm 
 
 
 # Tạo API Gemini 
