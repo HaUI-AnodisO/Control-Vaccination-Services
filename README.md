@@ -1,5 +1,3 @@
-# Control-Vaccination-Services
-
 [![Github license](https://img.shields.io/github/license/HaUI-AnodisO/Control-Vaccination-Services 'Github license')](https://github.com/HaUI-AnodisO/Control-Vaccination-Services/blob/develop/LICENSE)
 [![Open issues](https://img.shields.io/github/issues/HaUI-AnodisO/Control-Vaccination-Services 'Open issues')](https://github.com/HaUI-AnodisO/Control-Vaccination-Services/issues)
 [![Open Pull Requests](https://img.shields.io/github/issues-pr/HaUI-AnodisO/Control-Vaccination-Services 'Open Pull Requests')](https://github.com/HaUI-AnodisO/Control-Vaccination-Services/pulls)
@@ -13,12 +11,19 @@
 <a href="https://github.com/HaUI-AnodisO/Control-Vaccination-Services/issues/new?assignees=&labels=&projects=&template=feature_request.md&title=">Request Feature 👩‍💻</a>
  
 ![Trang chủ](docs/images/trang_chu.png)
-![Trang chủ Upload](docs/images/trang_cho_uploadupload.jpeg)
 
-Giới thiệu lại
 
-### Mục tiêu: 
-#### Viết lại
+Ứng dụng quản lý tiêm chủng, phát triển trên nền tảng Budibase để tối ưu quy trình và giảm thao tác thủ công.
+
+Mục tiêu phát triển ứng dụng quản lý tiêm chủng, phát triển trên nền tảng LCDP Budibase kết hợp với AI, tự động hóa quy trình để giảm thao tác thủ công và nâng cao hiệu quả quản lý.  
+
+Dự án được thực hiện trong cuộc thi [Phần Mềm Nguồn Mở-Olympic Tin học Sinh viên Việt Nam 2024](https://www.olp.vn/procon-pmmn/ph%E1%BA%A7n-m%E1%BB%81m-ngu%E1%BB%93n-m%E1%BB%9F). Được được open source theo giấy phép [Apache License, Version 2.0](https://opensource.org/license/apache-2-0) bởi đội tác giả HaUI-AnodisO.
+
+Để biết thêm chi tiết về cuộc thi, bạn có thể xem tại [đây](https://vfossa.vn/tin-tuc/de-thi-phan-mem-nguon-mo-olp-2023-688.html).
+
+Link thuyết trình Canva tại cuộc thi [link](https://www.canva.com/design/DAF2LR6LJIs/NFyCiN8JIVlDoRa33GSp1Q/edit?utm_content=DAF2LR6LJIs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
+Slide bài thuyết trình tại cuộc thi dưới dạng PDF có thể được truy cập tại đây: [Slide](./docs/pdf/Phần%20mềm%20nguồn%20mở%202023.pdf)
 
 ---
 ## 🔎 Danh Mục
@@ -71,7 +76,7 @@ Hệ thống sử dụng kiến trúc [Layered Architecture](https://topdev.vn/b
 Project CI/CD sử dụng Github và [Github Actions](https://github.com/Anodis108/HAUI-HITAnodisO/tree/develop/.github/workflows) để tự động hóa quá trình build và deploy. Quy trình như hình vẽ sau:
 ![CI/CD](docs/images/ci_cd.svg)
 
-- [commitlint.yml](https://github.com/Anodis108/HAUI-HITAnodisO/blob/develop/.github/workflows/commitlint.yml): Lint các commit message của các nhánh
+- [commitlint.yml](https://github.com/HaUI-AnodisO/Control-Vaccination-Services/blob/develop/.github/workflows/commitlint.yml): Lint các commit message của các nhánh
 
 
 
