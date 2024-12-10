@@ -1,5 +1,0 @@
-PyMuPDF
-fastapi
-opencv-python
-numpy
-pycryptodome
