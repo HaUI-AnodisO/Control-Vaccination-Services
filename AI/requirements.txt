@@ -10,3 +10,4 @@ PyMuPDF
 pycryptodome
 python-multipart
 python-dotenv
+pytest

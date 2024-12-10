@@ -30,41 +30,42 @@ Slide bài thuyết trình tại cuộc thi dưới dạng PDF có thể đượ
 
 1. [Giới Thiệu](#Giới-Thiệu)
 2. [Chức Năng Chính](#chức-năng-chính)
-3. [Tổng Quan Hệ Thống](#👩‍💻-tổng-quan-hệ-thống)
+3. [Tổng Quan Hệ Thống](#-tổng-quan-hệ-thống)
 4. [Cấu Trúc Thư Mục](#cấu-trúc-thư-mục)
 5. [Danh sách API](#api-list)
 6. [Thiết kế Database](#thiết-kế-database)
 7. [Hướng Dẫn Cài Đặt](#hướng-dẫn-cài-đặt)
     - [📋 Yêu Cầu - Prerequisites](#yêu-cầu-📋)
     - [🔨 Cài Đặt](#🔨-cài-đặt)
-8. [CI/CD](#ci/cd)
-9. [🙌 Đóng Góp](#🙌-đóng-góp-cho-dự-án)
-10. [📝 License](#📝-license)
+8. [CI/CD](#cicd)
+9. [🙌 Đóng Góp](#-đóng-góp-cho-dự-án)
+10. [📝 License](#-license)
 
 
 ---
 
 
 ## Giới Thiệu
-#### Viết lại
+
 - [Công nghệ LCDP](https://vfossa.vn/tin-tuc/gioi-thieu-chu-de-cuoc-thi-phan-mem-nguon-mo-olp-2024-709.html) cho phép các công cụ cấu hình dễ dàng và triển khai nhanh chóng mà không cần phải lập trình nhiều.
-
-
+- [Budibase](https://docs.budibase.com/docs/what-is-budibase)Budibase là nền tảng phát triển ứng dụng Low-Code, cho phép tạo nhanh các ứng dụng nội bộ với giao diện trực quan, tích hợp linh hoạt và khả năng triển khai dễ dàng.
 ---
 
 
-## Chức Năng Chính
+## Chức Năng 
 Dự án tập trung vào các chức năng chính sau:
 
-#### Viết lại
+
+Link đặc tả usecase [link](https://docs.google.com/document/d/1W7d9Jv12tFRPOvTuHa_aR0t0nrU0JI6fVPU96vjWVeA/edit?usp=sharing)
+
+Document đặc tả usecase: [Doc](docs/pdf/usecase.pdf)
 
 
 ---
 
 ## 👩‍💻 Tổng Quan Hệ Thống
 #### Xem và viết lại
-
-Hệ thống sử dụng kiến trúc [Layered Architecture](https://topdev.vn/blog/kien-truc-phan-lop-layered-architecture/) để dễ dàng cấu hình và phát triển các module. Các công nghệ sử dụng trong hệ thống bao gồm:
+Mô hình hệ thống bao gồm các công nghệ:
 
 
 <img loading="lazy" src="docs/images/sysyem_architecture.svg" alt="System Architecture" width="100%" height=600>
@@ -82,11 +83,9 @@ Project CI/CD sử dụng Github và [Github Actions](https://github.com/Anodis1
 
 
 ## Cấu trúc thư mục
-
-### Sửa lại
-- [Docs](docs): Tài liệu về hệ thống, cuoocj thi, sử dụng.
-- [AI](AI/README.md): Tài liệu về module xử lý ảnh
-
+- [src](src/README.md): Các tệp export của budibase
+- [Docs](docs): Tài liệu về hệ thống, cuộc thi, sử dụng.
+- [AI](AI/README.md): Tài liệu về module ocr
 
 ---
 ## API List
@@ -140,14 +139,27 @@ git clone https://github.com/HaUI-AnodisO/Control-Vaccination-Services.git
 
 Bạn sẽ thấy một file nén trong thu mục src/.   
 Bây giờ, bạn hãy import thư mục nén này vào app budibase như sau họăc dựa theo [hướng dẫn này](https://docs.budibase.com/docs/export-and-import-apps#:~:text=Within%20the%20Apps%20screen%2C%20click,click%20Import%20app%20to%20finish.):  
-Bước 1: Trên github, tại phần release có tệp nén **Vaccine.Control.Center-export-###.tar.gz** là phần EXport app của chúng tôi. Hãy lưu tệp đó về  
-Bước 2: Mở ứng dụng và đăng nhập vào tài khoản  
-Bước 3: Chọn ***Create new app*** để tạo mới app rồi chọn app mới đó  
-Bước 4: Vào phần ***Settings***, chọn ***Export/Import*** rồi chọn ***Import app***![alt text](docs/images/budibase.png)
-Bước 5: Chọn tệp **Vaccine.Control.Center-export-###.tar.gz** đã tải về trước đó, vậy là bạn đã có thể sử dụng dịch vụ của chúng tôi rồi
+## Hướng dẫn Cài đặt và Sử dụng
+
+### Bước 1: Tải tệp nén
+Truy cập vào phần **Release** trên GitHub, tìm tệp nén có tên `Vaccine.Control.Center-export-###.tar.gz`, đây là phần **Export app** của chúng tôi. Hãy tải tệp đó về máy.
+
+### Bước 2: Đăng nhập vào ứng dụng
+Mở ứng dụng và đăng nhập vào tài khoản của bạn.
+
+### Bước 3: Tạo ứng dụng mới
+Chọn **Create new app** để tạo một ứng dụng mới, sau đó chọn ứng dụng mới vừa tạo.
+
+### Bước 4: Nhập ứng dụng
+Vào phần **Settings**, chọn **Export/Import**, sau đó nhấn **Import app**  
+![Import App](docs/images/budibase.png)
+
+### Bước 5: Hoàn tất
+Chọn tệp `Vaccine.Control.Center-export-###.tar.gz` mà bạn đã tải về, rồi nhấn **Update**. Vậy là bạn đã có thể sử dụng dịch vụ của chúng tôi ngay bây giờ!
 
 
 
+---
 ## 🙌 Đóng góp cho dự án
 
 <a href="https://github.com/Anodis108/HAUI-HITAnodisO/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=">Bug Report ⚠️
