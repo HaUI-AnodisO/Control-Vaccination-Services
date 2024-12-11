@@ -54,7 +54,9 @@ Slide bài thuyết trình tại cuộc thi dưới dạng PDF có thể đượ
 
 ## Chức Năng 
 Dự án tập trung vào các chức năng chính sau:
-
+- Đăng ký tiêm
+- Lập lịch tiêm
+- Chatbot
 
 Link đặc tả usecase [link](https://docs.google.com/document/d/1W7d9Jv12tFRPOvTuHa_aR0t0nrU0JI6fVPU96vjWVeA/edit?usp=sharing)
 
@@ -70,7 +72,7 @@ Mô hình hệ thống bao gồm các công nghệ:
 - [Nginx](https://nginx.org/en/): Reverse proxy server, load balancer, và web server cho các dịch vụ.
 - [Budibase](https://budibase.com/): Nền tảng low-code để xây dựng và triển khai ứng dụng  nhanh chóng.
 - [FastAPI](https://fastapi.tiangolo.com/): Framework web để xây dựng API nhanh chóng và hiệu quả với Python.
-- [Gemini](https://gemini.google.com/): API hỗ trợ các mô hình trí tuệ nhân tạo và học máy, như GPT, phục vụ các tác vụ xử lý ngữ nghĩa và trích xuất thông tin.
+- [OpenAIPlatform](https://platform.openai.com/): tạo API hỗ trợ các mô hình trí tuệ nhân tạo và học máy
 <img loading="lazy" src="docs/images/sysyem_architecture.svg" alt="System Architecture" width="100%" height=600>
 
 
@@ -88,14 +90,11 @@ Project CI/CD sử dụng Github và [Github Actions](https://github.com/Anodis1
 ## Cấu trúc thư mục
 - [src](src/README.md): Các tệp export của budibase
 - [Docs](docs): Tài liệu về hệ thống, cuộc thi, sử dụng.
-- [AI](AI/README.md): Tài liệu về module ocr và Gemini AI
+- [AI](AI/README.md): Tài liệu về module ocr và OpenAPI AI Key
 
----
-## API List
-#### Viết lại
----
 ## Thiết kế Database
-![database.png](docs/images/database.png)
+![alt text](docs/images/database.png)
+
 ---
 
 ## Hướng Dẫn Cài Đặt
@@ -155,6 +154,8 @@ cd vào thư mục Control-Vaccination-Services/src:
 cd Control-Vaccination-Services/src
 ```
 Bạn sẽ thấy các file đã được giải nén ra. Việc cần làm là nén chúng lại giống như [hướng dẫn](src/README.md) để tạo file nén.   
+
+---
 Bây giờ, bạn hãy import thư mục nén này vào app budibase như sau họăc dựa theo [hướng dẫn này](https://docs.budibase.com/docs/export-and-import-apps#:~:text=Within%20the%20Apps%20screen%2C%20click,click%20Import%20app%20to%20finish.):  
 ## Hướng dẫn Cài đặt và Sử dụng
 

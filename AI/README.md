@@ -1,10 +1,20 @@
 # AI
 Thư mục này chứa các mô-đun AI và xử lý dữ liệu liên quan đến trí tuệ nhân tạo (AI).   
 - Data cho việc train model yolov11: [link](https://drive.google.com/file/d/1Tbjlu5EW1jrnpt7lmR0CKzr26LCUtnRn/view?usp=sharing) - bộ data được tạo và gán nhãn trên [roboflow](https://app.roboflow.com/)
-## OCR
+
 ### Cấu trúc thư mục
 ```bash
-── Dockerfile
+.
+├── digital_sig
+│   ├── __init__.py
+│   ├── insert_stamp.py
+│   ├── main_digital_sig.py
+│   ├── make_dig_sig.py
+│   ├── requirements.txt
+│   ├── sign_pdf.py
+│   ├── utils.py
+│   └── verify_pdf_signature.py
+├── Dockerfile
 ├── __init__.py
 ├── main.py
 ├── ocr
@@ -52,6 +62,8 @@ Thư mục này chứa các mô-đun AI và xử lý dữ liệu liên quan đ�
         docker run -d -p 8000:8000 my-fastapi-app
         ```
 **Kết thúc**: bạn có thể gọi api tại http://localhost:8000
+
+## OCR
 ### Mô tả chức năng chính
 
 **`/process-image/`**: API sẽ nhận một tệp ảnh, sử dụng mô hình YOLOv11 để phát hiện các đối tượng trong ảnh, sau đó sử dụng mô hình OCR để nhận dạng văn bản từ các vùng ảnh đã được cắt ra. 
@@ -128,4 +140,6 @@ Dưới đây là nội dung mà bạn có thể sao chép vào tệp `.txt`:
    Sau đó, bạn chỉ cần khởi động lại budibase là có thể sử dụng openAI. Chi tiết cách sử dụng có thể tham khảo [video](https://youtu.be/64l-sBltgnw?si=sF7xRMdeITWKw1he)
 ---
 
-Sau khi thực hiện xong các bước trên, bạn đã cấu hình thành công API Key cho Budibase.
+Sau khi thực hiện xong các bước trên, bạn đã cấu hình thành công API Key cho AI ở địa chỉ http://localhost:8000/ai/docs
+
+
