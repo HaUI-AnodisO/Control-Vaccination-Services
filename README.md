@@ -21,9 +21,9 @@ Dự án được thực hiện trong cuộc thi [Phần Mềm Nguồn Mở-Olym
 
 Để biết thêm chi tiết về cuộc thi, bạn có thể xem tại [đây](https://vfossa.vn/tin-tuc/gioi-thieu-chu-de-cuoc-thi-phan-mem-nguon-mo-olp-2024-709.html).
 
-Link thuyết trình Canva tại cuộc thi [link]()
+Link thuyết trình Canva tại cuộc thi [link](https://www.canva.com/design/DAGWnyHjyAQ/OwOZ1dsgB2qzn6jAMSzWpg/edit?utm_content=DAGWnyHjyAQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
-Slide bài thuyết trình tại cuộc thi dưới dạng PDF có thể được truy cập tại đây: [Slide]()
+Slide bài thuyết trình tại cuộc thi dưới dạng PDF có thể được truy cập tại đây: [Slide](docs/pdf/slinde.pdf)
 
 ---
 ## 🔎 Danh Mục
