@@ -17,11 +17,11 @@
 
 Mục tiêu phát triển ứng dụng quản lý tiêm chủng, phát triển trên nền tảng LCDP Budibase kết hợp với AI, tự động hóa quy trình để giảm thao tác thủ công và nâng cao hiệu quả quản lý.  
 
-Dự án được thực hiện trong cuộc thi [Phần Mềm Nguồn Mở-Olympic Tin học Sinh viên Việt Nam 2024](https://www.olp.vn/procon-pmmn/ph%E1%BA%A7n-m%E1%BB%81m-ngu%E1%BB%93n-m%E1%BB%9F). Được được open source theo giấy phép [Apache License, Version 2.0](https://opensource.org/license/apache-2-0) bởi đội tác giả HaUI-AnodisO.
+Dự án được thực hiện trong cuộc thi [Phần Mềm Nguồn Mở-Olympic Tin học Sinh viên Việt Nam 2024](https://www.olp.vn/procon-pmmn/ph%E1%BA%A7n-m%E1%BB%81m-ngu%E1%BB%93n-m%E1%BB%9F). Được open source theo giấy phép [Apache License, Version 2.0](https://opensource.org/license/apache-2-0) bởi đội tác giả HaUI-AnodisO.
 
 Để biết thêm chi tiết về cuộc thi, bạn có thể xem tại [đây](https://vfossa.vn/tin-tuc/gioi-thieu-chu-de-cuoc-thi-phan-mem-nguon-mo-olp-2024-709.html).
 
-Link thuyết trình Canva tại cuộc thi [link](https://www.canva.com/design/DAGWnyHjyAQ/OwOZ1dsgB2qzn6jAMSzWpg/edit?utm_content=DAGWnyHjyAQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+Link thuyết trình Canva tại cuộc thi [link](https://www.canva.com/design/DAGY-gPSgIw/az2fo9xRoZm0WQ4q92iTyA/edit?utm_content=DAGY-gPSgIw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 Slide bài thuyết trình tại cuộc thi dưới dạng PDF có thể được truy cập tại đây: [Slide](docs/pdf/slinde.pdf)
 
@@ -53,9 +53,11 @@ Slide bài thuyết trình tại cuộc thi dưới dạng PDF có thể đượ
 
 ## Chức Năng 
 Dự án tập trung vào các chức năng chính sau:
-- Đăng ký tiêm
-- Lập lịch tiêm
-- Chatbot
+- Đăng ký lịch tiêm chủng
+- Thông báo lịch tiêm tự động
+- Chatbot hỗ trợ thông minh
+- Cấp giấy xác nhận tiêm chủng
+- Xử lý phản hồi đăng ký nhanh chóng
 
 Link đặc tả usecase [link](https://docs.google.com/document/d/1W7d9Jv12tFRPOvTuHa_aR0t0nrU0JI6fVPU96vjWVeA/edit?usp=sharing)
 
@@ -77,7 +79,6 @@ Mô hình hệ thống bao gồm các công nghệ:
 
 ## CI/CD
 
-#### Hoàn thiện và viết tiếp
 Project CI/CD sử dụng Github và [Github Actions](https://github.com/Anodis108/HAUI-HITAnodisO/tree/develop/.github/workflows) để tự động hóa quá trình build và deploy. Quy trình như hình vẽ sau:
 ![CI/CD](docs/images/ci_cd.svg)
 
