@@ -1,9 +1,10 @@
 # AI
-Thư mục này chứa các mô-đun AI và xử lý dữ liệu liên quan đến trí tuệ nhân tạo (AI). 
+Thư mục này chứa các mô-đun AI và xử lý dữ liệu liên quan đến trí tuệ nhân tạo (AI).   
+- Data cho việc train model yolov11: [link](https://drive.google.com/file/d/1Tbjlu5EW1jrnpt7lmR0CKzr26LCUtnRn/view?usp=sharing) - bộ data được tạo và gán nhãn trên [roboflow](https://app.roboflow.com/)
 ## OCR
 ### Cấu trúc thư mục
 ```bash
-├── Dockerfile
+── Dockerfile
 ├── __init__.py
 ├── main.py
 ├── ocr
@@ -17,6 +18,8 @@ Thư mục này chứa các mô-đun AI và xử lý dữ liệu liên quan đ�
 │       ├── __init__.py
 │       ├── ocr_utils.py
 │       └── yolo_utils.py
+├── __pycache__
+│   └── main.cpython-310.pyc
 ├── README.md
 └── requirements.txt
 
@@ -68,23 +71,61 @@ Thư mục này chứa các mô-đun AI và xử lý dữ liệu liên quan đ�
   4. Trả về thông tin cần thiết
 
 
-## Gemini API
+# OpenAI API Key
 
+## Tạo API Key OpenAI
+[![Tạo API key](https://img.youtube.com/vi/gBSh9JI28UQ/0.jpg
+)](https://youtu.be/gBSh9JI28UQ?si=ZkmB2nGuBmJK-LM7)   
 
-# Tạo API Gemini 
-## Bước 1: truy cập vào [link](aistudio.google.com) để vào trang tạo API, sẽ có giao diện như sau![alt text](../docs/images/gemini.png)
-## Bước 2: Nhấn vào *Get API key* ở góc trên bên phải để đến màn hình![alt text](../docs/images/gemini-1.png)
-## Bước 3: Chọn *Create API key* rồi chọn *Create API key in new project* hoặc chọn project có sẵn nếu có ![alt text](../docs/images/gemini-2.png)
-## Bước 4: Chọn *Copy* để sao chép API key rồi thực hiện lệnh sau để test API![alt text](../docs/images/gemini-3.png)
-```bash
-curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}" \
-    -H 'Content-Type: application/json' \
-    -X POST \
-    -d '{
-      "contents": [{
-        "parts":[{"text": "Write a story about a magic backpack."}]
-        }]
-       }'
+## Setup API Key
+Dưới đây là nội dung mà bạn có thể sao chép vào tệp `.txt`:
+
 ```
+## Cấu hình API Key
 
-**Ngoài ra**: Các bạn có thể thực hiện theo [Hướng dẫn](https://ai.google.dev/gemini-api/docs/api-key?hl=vi) này
+### Yêu cầu:
+- Đã cài đặt Budibase Self-hosted
+- Có OpenAI API Key
+
+### Các bước thực hiện:
+
+1. **Di chuyển đến thư mục chứa repository Budibase của bạn**  
+   Truy cập vào thư mục chứa dự án Budibase:
+   ```bash
+   cd budibase/
+   ```
+
+2. **Di chuyển đến thư mục hosting**  
+   Chuyển đến thư mục `hosting` trong dự án:
+   ```bash
+   cd hosting
+   ```
+
+3. **Sửa đổi thông tin trong 3 tệp cấu hình**  
+   Bạn cần chỉnh sửa ba tệp: `.env`, `hosting.properties`, và `docker-compose.yaml`.
+
+   #### 3.1. Chỉnh sửa tệp `docker-compose.yaml`  
+   Thêm dòng sau vào phần `environment` của service:
+   ```yaml
+   OPENAI_API_KEY: ${OPENAI_API_KEY}
+   ```
+   **Ví dụ:**
+   ![docker-compose](../docs/images/openai1.png)
+
+   #### 3.2. Thêm OpenAI API Key vào tệp `.env`  
+   Mở tệp `.env` và thêm dòng sau:
+   ```bash
+   OPENAI_API_KEY=Your_open_api_key
+   # VD: OPENAI_API_KEY=abc123
+   ```
+
+   #### 3.3. Thêm OpenAI API Key vào tệp `hosting.properties`  
+   Mở tệp `hosting.properties` và thêm dòng sau:
+   ```bash
+   OPENAI_API_KEY=Your_open_api_key
+   # VD: OPENAI_API_KEY=abc123
+   ```
+   Sau đó, bạn chỉ cần khởi động lại budibase là có thể sử dụng openAI. Chi tiết cách sử dụng có thể tham khảo [video](https://youtu.be/64l-sBltgnw?si=sF7xRMdeITWKw1he)
+---
+
+Sau khi thực hiện xong các bước trên, bạn đã cấu hình thành công API Key cho Budibase.
