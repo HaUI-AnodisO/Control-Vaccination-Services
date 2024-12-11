@@ -32,14 +32,13 @@ Slide bài thuyết trình tại cuộc thi dưới dạng PDF có thể đượ
 2. [Chức Năng Chính](#chức-năng-chính)
 3. [Tổng Quan Hệ Thống](#-tổng-quan-hệ-thống)
 4. [Cấu Trúc Thư Mục](#cấu-trúc-thư-mục)
-5. [Danh sách API](#api-list)
-6. [Thiết kế Database](#thiết-kế-database)
-7. [Hướng Dẫn Cài Đặt](#hướng-dẫn-cài-đặt)
+5. [Thiết kế Database](#thiết-kế-database)
+6. [Hướng Dẫn Cài Đặt](#hướng-dẫn-cài-đặt)
     - [📋 Yêu Cầu - Prerequisites](#yêu-cầu-📋)
     - [🔨 Cài Đặt](#🔨-cài-đặt)
-8. [CI/CD](#cicd)
-9. [🙌 Đóng Góp](#-đóng-góp-cho-dự-án)
-10. [📝 License](#-license)
+7. [CI/CD](#cicd)
+8. [🙌 Đóng Góp](#-đóng-góp-cho-dự-án)
+9. [📝 License](#-license)
 
 
 ---
@@ -72,7 +71,7 @@ Mô hình hệ thống bao gồm các công nghệ:
 - [Nginx](https://nginx.org/en/): Reverse proxy server, load balancer, và web server cho các dịch vụ.
 - [Budibase](https://budibase.com/): Nền tảng low-code để xây dựng và triển khai ứng dụng  nhanh chóng.
 - [FastAPI](https://fastapi.tiangolo.com/): Framework web để xây dựng API nhanh chóng và hiệu quả với Python.
-- [OpenAIPlatform](https://platform.openai.com/): tạo API hỗ trợ các mô hình trí tuệ nhân tạo và học máy
+- [GeminiAI](https://aistudio.google.com/): tạo API hỗ trợ các mô hình trí tuệ nhân tạo và học máy
 <img loading="lazy" src="docs/images/sysyem_architecture.svg" alt="System Architecture" width="100%" height=600>
 
 
