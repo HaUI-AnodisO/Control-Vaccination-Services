@@ -141,6 +141,7 @@ Trước hết, hãy cd vào thư mục AI
 cd AI/
 ```
 Sau đó, thực hiện các bước theo [hướng dẫn này](AI/README.md)
+
 ---
 #### Import dự án của chúng tôi
 Trước hết, hãy clone dự án về máy tính của bạn:
