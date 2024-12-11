@@ -17,13 +17,13 @@
 
 Mục tiêu phát triển ứng dụng quản lý tiêm chủng, phát triển trên nền tảng LCDP Budibase kết hợp với AI, tự động hóa quy trình để giảm thao tác thủ công và nâng cao hiệu quả quản lý.  
 
-Dự án được thực hiện trong cuộc thi [Phần Mềm Nguồn Mở-Olympic Tin học Sinh viên Việt Nam 2024](https://www.olp.vn/procon-pmmn/ph%E1%BA%A7n-m%E1%BB%81m-ngu%E1%BB%93n-m%E1%BB%9F). Được được open source theo giấy phép [Apache License, Version 2.0](https://opensource.org/license/apache-2-0) bởi đội tác giả HaUI-AnodisO.
+Dự án được thực hiện trong cuộc thi [Phần Mềm Nguồn Mở-Olympic Tin học Sinh viên Việt Nam 2024](https://www.olp.vn/procon-pmmn/ph%E1%BA%A7n-m%E1%BB%81m-ngu%E1%BB%93n-m%E1%BB%9F). Được open source theo giấy phép [Apache License, Version 2.0](https://opensource.org/license/apache-2-0) bởi đội tác giả HaUI-AnodisO.
 
 Để biết thêm chi tiết về cuộc thi, bạn có thể xem tại [đây](https://vfossa.vn/tin-tuc/gioi-thieu-chu-de-cuoc-thi-phan-mem-nguon-mo-olp-2024-709.html).
 
-Link thuyết trình Canva tại cuộc thi [link]()
+Link thuyết trình Canva tại cuộc thi [link](https://www.canva.com/design/DAGY-gPSgIw/az2fo9xRoZm0WQ4q92iTyA/edit?utm_content=DAGY-gPSgIw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
-Slide bài thuyết trình tại cuộc thi dưới dạng PDF có thể được truy cập tại đây: [Slide]()
+Slide bài thuyết trình tại cuộc thi dưới dạng PDF có thể được truy cập tại đây: [Slide](docs/pdf/slinde.pdf)
 
 ---
 ## 🔎 Danh Mục
@@ -32,14 +32,13 @@ Slide bài thuyết trình tại cuộc thi dưới dạng PDF có thể đượ
 2. [Chức Năng Chính](#chức-năng-chính)
 3. [Tổng Quan Hệ Thống](#-tổng-quan-hệ-thống)
 4. [Cấu Trúc Thư Mục](#cấu-trúc-thư-mục)
-5. [Danh sách API](#api-list)
-6. [Thiết kế Database](#thiết-kế-database)
-7. [Hướng Dẫn Cài Đặt](#hướng-dẫn-cài-đặt)
+5. [Thiết kế Database](#thiết-kế-database)
+6. [Hướng Dẫn Cài Đặt](#hướng-dẫn-cài-đặt)
     - [📋 Yêu Cầu - Prerequisites](#yêu-cầu-📋)
     - [🔨 Cài Đặt](#🔨-cài-đặt)
-8. [CI/CD](#cicd)
-9. [🙌 Đóng Góp](#-đóng-góp-cho-dự-án)
-10. [📝 License](#-license)
+7. [CI/CD](#cicd)
+8. [🙌 Đóng Góp](#-đóng-góp-cho-dự-án)
+9. [📝 License](#-license)
 
 
 ---
@@ -54,7 +53,11 @@ Slide bài thuyết trình tại cuộc thi dưới dạng PDF có thể đượ
 
 ## Chức Năng 
 Dự án tập trung vào các chức năng chính sau:
-
+- Đăng ký lịch tiêm chủng
+- Thông báo lịch tiêm tự động
+- Chatbot hỗ trợ thông minh
+- Cấp giấy xác nhận tiêm chủng
+- Xử lý phản hồi đăng ký nhanh chóng
 
 Link đặc tả usecase [link](https://docs.google.com/document/d/1W7d9Jv12tFRPOvTuHa_aR0t0nrU0JI6fVPU96vjWVeA/edit?usp=sharing)
 
@@ -70,13 +73,12 @@ Mô hình hệ thống bao gồm các công nghệ:
 - [Nginx](https://nginx.org/en/): Reverse proxy server, load balancer, và web server cho các dịch vụ.
 - [Budibase](https://budibase.com/): Nền tảng low-code để xây dựng và triển khai ứng dụng  nhanh chóng.
 - [FastAPI](https://fastapi.tiangolo.com/): Framework web để xây dựng API nhanh chóng và hiệu quả với Python.
-- [Gemini](https://gemini.google.com/): API hỗ trợ các mô hình trí tuệ nhân tạo và học máy, như GPT, phục vụ các tác vụ xử lý ngữ nghĩa và trích xuất thông tin.
+- [GeminiAI](https://aistudio.google.com/): tạo API hỗ trợ các mô hình trí tuệ nhân tạo và học máy
 <img loading="lazy" src="docs/images/sysyem_architecture.svg" alt="System Architecture" width="100%" height=600>
 
 
 ## CI/CD
 
-#### Hoàn thiện và viết tiếp
 Project CI/CD sử dụng Github và [Github Actions](https://github.com/Anodis108/HAUI-HITAnodisO/tree/develop/.github/workflows) để tự động hóa quá trình build và deploy. Quy trình như hình vẽ sau:
 ![CI/CD](docs/images/ci_cd.svg)
 
@@ -88,14 +90,11 @@ Project CI/CD sử dụng Github và [Github Actions](https://github.com/Anodis1
 ## Cấu trúc thư mục
 - [src](src/README.md): Các tệp export của budibase
 - [Docs](docs): Tài liệu về hệ thống, cuộc thi, sử dụng.
-- [AI](AI/README.md): Tài liệu về module ocr và Gemini AI
+- [AI](AI/README.md): Tài liệu về module ocr và OpenAPI AI Key
 
----
-## API List
-#### Viết lại
----
 ## Thiết kế Database
-![database.png](docs/images/database.png)
+![alt text](docs/images/database.png)
+
 ---
 
 ## Hướng Dẫn Cài Đặt
@@ -141,6 +140,7 @@ Trước hết, hãy cd vào thư mục AI
 cd AI/
 ```
 Sau đó, thực hiện các bước theo [hướng dẫn này](AI/README.md)
+
 ---
 #### Import dự án của chúng tôi
 Trước hết, hãy clone dự án về máy tính của bạn:
@@ -154,6 +154,8 @@ cd vào thư mục Control-Vaccination-Services/src:
 cd Control-Vaccination-Services/src
 ```
 Bạn sẽ thấy các file đã được giải nén ra. Việc cần làm là nén chúng lại giống như [hướng dẫn](src/README.md) để tạo file nén.   
+
+---
 Bây giờ, bạn hãy import thư mục nén này vào app budibase như sau họăc dựa theo [hướng dẫn này](https://docs.budibase.com/docs/export-and-import-apps#:~:text=Within%20the%20Apps%20screen%2C%20click,click%20Import%20app%20to%20finish.):  
 ## Hướng dẫn Cài đặt và Sử dụng
 

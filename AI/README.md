@@ -1,8 +1,19 @@
 # AI
-Thư mục này chứa các mô-đun AI và xử lý dữ liệu liên quan đến trí tuệ nhân tạo (AI). 
-## OCR
+Thư mục này chứa các mô-đun AI và xử lý dữ liệu liên quan đến trí tuệ nhân tạo (AI).   
+- Data cho việc train model yolov11: [link](https://drive.google.com/file/d/1Tbjlu5EW1jrnpt7lmR0CKzr26LCUtnRn/view?usp=sharing) - bộ data được tạo và gán nhãn trên [roboflow](https://app.roboflow.com/)
+
 ### Cấu trúc thư mục
 ```bash
+.
+├── digital_sig
+│   ├── __init__.py
+│   ├── insert_stamp.py
+│   ├── main_digital_sig.py
+│   ├── make_dig_sig.py
+│   ├── requirements.txt
+│   ├── sign_pdf.py
+│   ├── utils.py
+│   └── verify_pdf_signature.py
 ├── Dockerfile
 ├── __init__.py
 ├── main.py
@@ -17,6 +28,8 @@ Thư mục này chứa các mô-đun AI và xử lý dữ liệu liên quan đ�
 │       ├── __init__.py
 │       ├── ocr_utils.py
 │       └── yolo_utils.py
+├── __pycache__
+│   └── main.cpython-310.pyc
 ├── README.md
 └── requirements.txt
 
@@ -49,6 +62,8 @@ Thư mục này chứa các mô-đun AI và xử lý dữ liệu liên quan đ�
         docker run -d -p 8000:8000 my-fastapi-app
         ```
 **Kết thúc**: bạn có thể gọi api tại http://localhost:8000
+
+## OCR
 ### Mô tả chức năng chính
 
 **`/process-image/`**: API sẽ nhận một tệp ảnh, sử dụng mô hình YOLOv11 để phát hiện các đối tượng trong ảnh, sau đó sử dụng mô hình OCR để nhận dạng văn bản từ các vùng ảnh đã được cắt ra. 
@@ -88,3 +103,8 @@ curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:g
 ```
 
 **Ngoài ra**: Các bạn có thể thực hiện theo [Hướng dẫn](https://ai.google.dev/gemini-api/docs/api-key?hl=vi) này
+---
+
+Sau khi thực hiện xong các bước trên, bạn đã cấu hình thành công API Key cho AI ở địa chỉ http://localhost:8000/ai/docs
+
+
