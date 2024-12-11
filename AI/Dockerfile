@@ -1,22 +1,29 @@
-# Use official Python image as a parent image
-FROM python:3.10-slim
+# Sử dụng image Python chính thức làm base image
+FROM python:3.11-slim
 
-# Set environment variables to prevent Python from writing .pyc files and buffering stdout/stderr
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+# Cài đặt thư viện OpenGL và các thư viện phụ thuộc
+RUN apt-get update && apt-get install -y libgl1-mesa-glx
 
-# Set working directory
+RUN apt-get update && apt-get install -y \
+    libglib2.0-0 \
+    libsm6 \
+    libxext6 \
+    libxrender-dev \
+    && rm -rf /var/lib/apt/lists/
+# Thiết lập thư mục làm việc trong container
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
-COPY . /app
+# Copy file requirements.txt vào container
+COPY requirements.txt /app/
 
-# Install dependencies
-RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt
+# Cài đặt các dependencies
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose port
-EXPOSE 8000
+# Copy toàn bộ mã nguồn vào container
+COPY . /app/
 
-# Run the application
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Mở cổng 8000 cho FastAPI
+EXPOSE 8001
+
+# Lệnh để chạy FastAPI với Uvicorn
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
