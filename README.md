@@ -10,7 +10,8 @@
 <a href="https://github.com/HaUI-AnodisO/Control-Vaccination-Services/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=">Bug Report ⚠️</a>
 <a href="https://github.com/HaUI-AnodisO/Control-Vaccination-Services/issues/new?assignees=&labels=&projects=&template=feature_request.md&title=">Request Feature 👩‍💻</a>
  
-![Trang chủ](docs/images/trang_chu.png)
+
+
 
 
 Ứng dụng quản lý tiêm chủng, phát triển trên nền tảng Budibase để tối ưu quy trình và giảm thao tác thủ công.
@@ -28,7 +29,7 @@ Slide bài thuyết trình tại cuộc thi dưới dạng PDF có thể đượ
 ---
 ## 🔎 Danh Mục
 
-1. [Giới Thiệu](#Giới-Thiệu)
+1. [Giới Thiệu, Demo sản phẩm](#Giới-Thiệu)
 2. [Chức Năng Chính](#chức-năng-chính)
 3. [Tổng Quan Hệ Thống](#-tổng-quan-hệ-thống)
 4. [Cấu Trúc Thư Mục](#cấu-trúc-thư-mục)
@@ -48,9 +49,12 @@ Slide bài thuyết trình tại cuộc thi dưới dạng PDF có thể đượ
 
 - [Công nghệ LCDP](https://vfossa.vn/tin-tuc/gioi-thieu-chu-de-cuoc-thi-phan-mem-nguon-mo-olp-2024-709.html) cho phép các công cụ cấu hình dễ dàng và triển khai nhanh chóng mà không cần phải lập trình nhiều.
 - [Budibase](https://docs.budibase.com/docs/what-is-budibase)Budibase là nền tảng phát triển ứng dụng Low-Code, cho phép tạo nhanh các ứng dụng nội bộ với giao diện trực quan, tích hợp linh hoạt và khả năng triển khai dễ dàng.
+
+
+# Demo sản phẩm
+[![WDemo sản phẩm](https://img.youtube.com/vi/rPpJRN_ruxo/0.jpg)](https://youtu.be/rPpJRN_ruxo?si=oMOWBKXC0RlozNUs)
+
 ---
-
-
 ## Chức Năng 
 Dự án tập trung vào các chức năng chính sau:
 - Đăng ký lịch tiêm chủng
@@ -60,8 +64,6 @@ Dự án tập trung vào các chức năng chính sau:
 - Xử lý phản hồi đăng ký nhanh chóng
 
 Link đặc tả usecase [link](https://docs.google.com/document/d/1W7d9Jv12tFRPOvTuHa_aR0t0nrU0JI6fVPU96vjWVeA/edit?usp=sharing)
-
-Document đặc tả usecase: [Doc](docs/pdf/usecase.pdf)
 
 
 ---
