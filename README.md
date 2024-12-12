@@ -10,7 +10,8 @@
 <a href="https://github.com/HaUI-AnodisO/Control-Vaccination-Services/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=">Bug Report ⚠️</a>
 <a href="https://github.com/HaUI-AnodisO/Control-Vaccination-Services/issues/new?assignees=&labels=&projects=&template=feature_request.md&title=">Request Feature 👩‍💻</a>
  
-![Trang chủ](docs/images/trang_chu.png)
+[![WDemo sản phẩm](https://img.youtube.com/vi/rPpJRN_ruxo/0.jpg)](https://youtu.be/rPpJRN_ruxo?si=oMOWBKXC0RlozNUs)
+
 
 
 Ứng dụng quản lý tiêm chủng, phát triển trên nền tảng Budibase để tối ưu quy trình và giảm thao tác thủ công.
@@ -60,8 +61,6 @@ Dự án tập trung vào các chức năng chính sau:
 - Xử lý phản hồi đăng ký nhanh chóng
 
 Link đặc tả usecase [link](https://docs.google.com/document/d/1W7d9Jv12tFRPOvTuHa_aR0t0nrU0JI6fVPU96vjWVeA/edit?usp=sharing)
-
-Document đặc tả usecase: [Doc](docs/pdf/usecase.pdf)
 
 
 ---
