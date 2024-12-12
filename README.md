@@ -13,7 +13,6 @@
 
 
 
-
 Ứng dụng quản lý tiêm chủng, phát triển trên nền tảng Budibase để tối ưu quy trình và giảm thao tác thủ công.
 
 Mục tiêu phát triển ứng dụng quản lý tiêm chủng, phát triển trên nền tảng LCDP Budibase kết hợp với AI, tự động hóa quy trình để giảm thao tác thủ công và nâng cao hiệu quả quản lý.  
